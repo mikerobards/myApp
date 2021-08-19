@@ -2,7 +2,7 @@
 
 namespace myApp
 {
-    class Program
+    class Program1
     {
         static void Arrays(string[] args)
         {
@@ -24,6 +24,12 @@ namespace myApp
 
             Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");
 
+            // foreach
+            string[] names = { "Bob", "Mike", "Karmen", "Chloe" };
+            foreach (string name in names)
+            {
+                Console.WriteLine(name);
+            }
 
         }
     }
