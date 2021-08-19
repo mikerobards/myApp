@@ -46,6 +46,63 @@ namespace myApp
 
             Console.WriteLine($"We have {sum} items in inventory.");
 
+
+            // conditional Complicated Permission Challenge
+
+            // string permission = "Admin|Manager";
+            // string permission = "Admin";
+            // string permission = "Manager";
+            string permission1 = "Intern";
+            int level1 = 19;
+
+            if (permission1.Contains("Manager") && level1 >= 20)
+            {
+                Console.WriteLine("Contact an Admin for access.");
+            }
+            else if (permission1.Contains("Admin") && level1 <= 55)
+            {
+                Console.WriteLine("Welcome, Admin user.");
+            }
+            else if (permission1.Contains("Admin") && level1 > 55)
+            {
+                Console.WriteLine("Welcome, Super Admin user.");
+            }
+            else
+            {
+                Console.WriteLine("You do not have sufficient privileges.");
+            }
+
+            //answer
+            string permission = "Admin|Manager";
+            int level = 53;
+
+            if (permission.Contains("Admin"))
+            {
+                if (level > 55)
+                {
+                    Console.WriteLine("Welcome, Super Admin user.");
+                }
+                else
+                {
+                    Console.WriteLine("Welcome, Admin user.");
+                }
+            }
+            else if (permission.Contains("Manager"))
+            {
+                if (level >= 20)
+                {
+                    Console.WriteLine("Contact an Admin for access.");
+                }
+                else
+                {
+                    Console.WriteLine("You do not have sufficient privileges.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("You do not have sufficient privileges.");
+            }
+
         }
     }
 }
